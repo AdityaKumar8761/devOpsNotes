@@ -1,0 +1,61 @@
+----------------------------------------------------------------------------------------->Notes for Devops<----------------------------------------------------------------------------------
+											        Day1
+											        	Linux(Kernal)
+
+Booting process					-BIOS(basic I/O Systems)/UEFI setting
+-startup process				-MBR(master boot record executes grub)
+-pwer connection				-GRUB(Grand Unified Bootloader executes kern)
+-switch on					-Kernal ( kernal executes /sbin/init)
+-os invoke					-Init(Init executes runlevel programs)
+-memory dectection-connection			-Runlevel(Runlevel programs are executed form
+-Initialize UI					/etc/rc./rc*.d/
+-OS load
+-applicatino startup
+-Process /service initiation
+-User login
+-speker check
+-data/ time drive check
+
+	Kernal
+-the core component of an operating system (OS) that acts as a bridge between the computer's hardware and software
+
+	Shell
+-command line interface that sits between kernal ad software
+
+
+Lunux Operaring system architecture
++---------------------------------------------------------+
+|                  User Applications (Programs)           |
++---------------------------------------------------------+
+|                 Shell / GUI (Command Line)              |
++---------------------------------------------------------+
+|         System Call Interface (SCI / syscall)           |
++---------------------------------------------------------+
+|                         Kernel                          |
+| +-------------------+  +----------------------------+   |
+| | Process Management|  | Memory Management         |   |
+| +-------------------+  +----------------------------+   |
+| +-------------------+  +----------------------------+   |
+| | File System       |  | Device Drivers            |   |
+| +-------------------+  +----------------------------+   |
+| +-----------------------------------------------------+ |
+| | Networking Stack                                    | |
+| +-----------------------------------------------------+ |
++---------------------------------------------------------+
+|                   Hardware (CPU, RAM, etc.)             |
++---------------------------------------------------------+
+
+
+
+
+---------------------------------> Directory structure <----------------------------
+-learn how to opperate multiple users ?????
+
+
+
+
+
+
+
+
+

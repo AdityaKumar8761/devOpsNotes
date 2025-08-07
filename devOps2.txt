@@ -1,0 +1,33 @@
+----------------------------------------------------------------------------------------->Notes for Devops<----------------------------------------------------------------------------------
+												day2
+Create a directory dir1
+create a file "file1.txt"
+add some content in file1.txt
+
+create another directory dir2
+copy file "file1.txt" in dir2
+
+code --->
+-mkdir dir1
+-cd dir1
+-touch file1.txt
+-echo "this is a file " >> file1.txt
+-cat file1.mkdir
+-cd
+-mkdir dir2
+-cd
+-mkdir dir1
+-mv text1.cd ../dir2
+-cd
+-cd dir2
+
+  422  history
+
+
+
+
+
+
+
+
+

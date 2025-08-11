@@ -1,0 +1,44 @@
+----------------------------------------------------------------------------------------->Notes for Devops<----------------------------------------------------------------------------------
+												day3
+		
+pwd
+ls -al
+cd .
+cd ..
+cd /
+cd ~ (/home/<username>)
+rm -rf
+cat
+touch
+echo "dff" >> file.txt
+whoami
+mkdir
+rmdir
+sudo
+ps -ef
+cp <src> <dst>
+mv <src> <dst>
+tree
+man
+apt
+Hollywood
+Text Exitor
+- vi
+- vim
+- nano
+Permissions
+
+chmod
+useradd
+adduser
+groupadd
+addgroup
+chgroup
+
+
+
+
+
+
+
+

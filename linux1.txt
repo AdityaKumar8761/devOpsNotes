@@ -1,0 +1,93 @@
+------------> Server <---------
+- A computer that serve information to clint
+- Clint is a pc that request service form server
+ - email server 
+ - web server
+ 
+- Web server - Static
+- application server - Dynamic 
+
+-Type of applications ----> Standalone app
+		      ----> Web application
+		      
+		               
+------------->Linux<-----------
+                                              #1
+
+linux -os
+	Hardware
+	  |
+	  V
+	heart of linux ---> kernal(written in c)
+	  |
+	  V
+	 Shell ( shell command) ( gateway to kernal ) 
+	  |
+	  V
+	 application
+	 
+	 
+bootloader -> Grub in linux for boot loading
+
+
+
+
+// commands for linux 
+- top  --> to monitor the system process(CPU)
+- free -h --> to see free space (RAM)
+- df -h --> to see the storage and available space (Hard disk)
+# here the -h represent human readable language 
+
+- cd --> to change directory
+- ls --> to list file and folder
+
+---/ Types of processes in linux 
+ - stoped
+ - running
+ - sleep 
+ - killed
+ - zombie
+ 
+
+					 
+					 #2
+					 
+					 
+///// renting a linux system in aws EC2  /////
+
+
+// shell command
+- date --> to know the date
+- mkdir --> to make a directory
+- ls -l --> detail list with permission
+- pwd --> tell the present working directory
+- touch to create a file --> touch file.txt
+
+
+//structure and permission 
+d(---)(---)(---) user group process name
+|  O    U    g
+v 
+d/-
+
+
+- cd .. -->go back one directory  (cd /home/ak/desktop)
+- rm filename --> how to remove the folder
+- rm -r  --> remove recussively 
+- rmdir  --> remove the directory
+- cat    --> to see what is inside       ( zcat to see the content of a zip file)
+- echo   --> to write 
+-  >     --> to enter the command in some file 
+
+~ echo "hello world" > file.txt
+
+- head and tail -- to print the top 5 and last 5
+- tail -f  --> monitor if there is a new line in the terminal
+
+- less   --> tell page by page 
+- more   -->     ||
+
+
+				#3
+				
+//copy

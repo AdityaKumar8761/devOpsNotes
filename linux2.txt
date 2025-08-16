@@ -1,0 +1,181 @@
+------------> Server <---------
+- A computer that serve information to clint
+- Clint is a pc that request service form server
+ - email server 
+ - web server
+ 
+- Web server - Static
+- application server - Dynamic 
+
+-Type of applications ----> Standalone app
+		      ----> Web application
+		      
+		               
+------------->Linux<-----------
+                                              #1
+
+linux -os
+	Hardware
+	  |
+	  V
+	heart of linux ---> kernal(written in c)
+	  |
+	  V
+	 Shell ( shell command) ( gateway to kernal ) 
+	  |
+	  V
+	 application
+	 
+	 
+bootloader -> Grub in linux for boot loading
+
+
+
+
+// commands for linux 
+- top  --> to monitor the system process(CPU)
+- free -h --> to see free space (RAM)
+- df -h --> to see the storage and available space (Hard disk)
+# here the -h represent human readable language 
+
+- cd --> to change directory
+- ls --> to list file and folder
+
+---/ Types of processes in linux 
+ - stoped
+ - running
+ - sleep 
+ - killed
+ - zombie
+ 
+
+					 
+					 #2
+					 
+					 
+///// renting a linux system in aws EC2  /////
+
+
+// shell command
+- date --> to know the date
+- mkdir --> to make a directory
+- ls -l --> detail list with permission
+- pwd --> tell the present working directory
+- touch to create a file --> touch file.txt
+
+
+//structure and permission 
+d(---)(---)(---) owner group bytes name
+|  U    G    O
+v 
+d/-
+
+
+- cd .. -->go back one directory  (cd /home/ak/desktop)
+- rm filename --> how to remove the folder
+- rm -r  --> remove recussively 
+- rmdir  --> remove the directory
+- cat    --> to see what is inside       ( zcat to see the content of a zip file)
+- echo   --> to write 
+-  >     --> to enter the command in some file 
+
+~ echo "hello world" > file.txt
+
+- head and tail -- to print the top 5 and last 5
+- tail -f  --> monitor if there is a new line in the terminal
+
+- less   --> tell page by page 
+- more   -->     ||
+
+
+				#3
+				
+//copy & move 
+- cp file.name directory/
+- cp dir/file.txt cloud/
+	| 		|
+	V		V
+      path to copy   where to copy
+      
+-cp -r cloud/ devops/
+
+-mv newfile.txt ../cloud/  ----------> can also be used to rename directory using mv nameofdirectory/ newname
+
+-wc (word count)
+//use//
+~ wc file.txt (work in multiple file)
+1 4 16 file.txt
+line word bytes
+
+// hard link and soft link
+-ln path (does not depend on hard link)
+-ln -s path name(change are also made in soft link)
+
+
+-cut -b 1 myfile.txt (cut the text in folter)
+
+-|tee ---> display the input and output on screen
+
+- sort file.txt
+
+- diff file1 file2
+
+///Editor vi ,vim ,nano ///
+ i  ---> insert
+ esc ---> for exit
+ :wq ---> save and quit
+ 
+ 
+ 
+ 					#4
+
+//User and group managenment 
+-uname ---> give you the data of what you are using 
+-uptime ---> give data about the uptime and how many users
+-Who / Whoami  -->who all the details of user / whoami only user name
+-which -->location of he file you are searching ~which bach
+-id -->user id
+
+
+/////Sudo/////
+(super user) --super user do
+-application pacakage mannager apt
+-sudo apt install nameOfTheFile
+-sudo apt-get install docker.io  -->download form internet
+//ther application pcackage manager -yum
+				    -dnf
+				    -portage
+				    -rpm
+				    
+				    
+//users and group management command//
+-sudo useradd -m name
+-sudo passwd name
+-su name -->passpward
+-sudo userdel name
+
+////creading group ////
+-sudo groupadd name
+-cat /etc/group
+
+-sudo gpasswd -a username group  ---> to add the user to the group
+-sudo gpasswd -M user,user2,user3 group
+-sudo groupdel nameOfGroup
+
+
+///permission///
+-chmod 777 cloud ---> change permission of user goroup and others
+-umask --------> by default permissofn foe a file
+-chown username (file or direcroy)
+-sudo chgrp group file.txt
+
+
+////Zipping file////
+-zip -r ldf.zip fileName/
+-unzip filename
+
+
+////file.transfer////
+
+
+

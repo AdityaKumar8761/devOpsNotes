@@ -1,0 +1,220 @@
+pwd
+ls -al
+cd .
+cd ..
+cd /
+cd ~ (/home/<username>)
+rm -rf
+cat
+touch
+echo "dff" >> file.txt
+whoami
+mkdir
+rmdir
+sudo
+ps -ef
+cp <src> <dst>
+mv <src> <dst>
+tree
+man
+apt
+Hollywood
+Text Exitor
+- vi
+- vim
+	- "i" : Insert
+	- ["esc" + ":" + "q"] : quit
+	- ["esc" + ":" + "w"] : Save
+	- ["esc" + ":" + "wq"] : Save & Quit
+	- ["esc" + ":" + "q!"] : Don't Save & Quit
+- nano
+	- ["Ctrl" + "X" + "Y" + "Enter"] : Exit & Save
+Permissions
+-      rwx | rwx | rwx
+ chmod [0-7][0-7][0-7] file.txt
+	 U    G	   O
+chmod
+chown
+useradd
+adduser
+groupadd
+addgroup
+chgroup
+usermod
+groupadd
+groupdel
+userdel
+
+head
+tail
+cut
+wget - to download
+curl - to show the page of a domain
+
+
+User & Group Management
+
+|| & &&
+
+Directory Structure
+
+cron
+
+SSH
+- Types:
+	- RSA
+	- Ed25519
+	- ECDSA 
+	- DSA
+- different types of encryption in SSH
+https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process
+	- Asymmetrical Encryption
+	- Symmetrical Encryption
+	- Hashing
+- Remote Command Execution
+- Remote File/dir Copy (SCP)
+
+Ways : 
+	- Using Pem key
+	- Using Public key
+ssh -i <key.pem> username@password
+ssh username@password
+ssh-keygen -t rsa
+ifconfig
+curl
+
+Process
+- FG
+- Bg (&)
+- Parent Process
+- Child Process
+- Zombie Process
+- Daemon Process
+- Orphan Process
+- Stopped Process
+- Sleeping Process
+- Kill 
+- Sleep
+- nice value
+- diff b/w nice & priority in top command
+- How to Create a zombie & orphan process
+- How to list a zombie & orphan process
+- Commands
+	- ps -ef
+	- ps aux
+	- top
+	- htop
+
+exit status 
+
+system monitoring
+- df
+- du
+- free
+- lsblk
+- lscpu
+- fdisk
+
+network
+- ping
+- dig
+- ifconfig
+- nslookup
+- telnet
+- netstat -tulpn
+- ip a
+
+awk/sed/grep
+Task 1:
+Write a bash script that:
+Creates a new user
+Adds the user to a specific group
+Sets up SSH access for the user (with public key authentication)
+Sets custom umask and shell configs
+Restricts sudo privileges to a minimal set
+Logs all actions to a log file
+
+
+Task 2:
+Monitor disk, memory, and CPU usage using a cronjob every 10 minutes.
+If disk usage > 85%, RAM < 200MB, or CPU > 90%, send an email (or log the issue).
+Output logs to a dedicated /var/log/sys_monitor.log.
+
+Task 3:
+Archive a specific directory (/var/www/html or /home/)
+Use scp to transfer it securely to a remote backup server using SSH key auth
+Set up a cronjob for daily execution and log rotation
+
+
+Task 4: 
+Write a bash script that:
+Checks if a website is up (via curl)
+Logs response codes, page load times
+Sends an alert email or logs if the site is unreachable
+
+
+Task 5: Implement a Mini Firewall using iptables or ufw
+Set up basic iptables or ufw rules:
+Allow SSH only from specific IP
+Block all incoming connections except HTTP/HTTPS
+Rate-limit connections on SSH to prevent brute force attacks
+Save and persist the configuration
+
+
+Task 6: 
+Simulate a Zombie & Orphan Process Tree 
+Write a small bash script to:
+Spawn child processes
+Terminate the parent prematurely to create orphan
+Use signals (kill -9) to generate zombie processes
+Monitor with ps -el | grep Z or top
+
+
+Task 7: 
+Create a Log Analyzer Script 
+Analyze /var/log/auth.log or /var/log/syslog Extract:
+Failed login attempts
+IP addresses trying brute-force attacks
+Usernames targeted
+Generate a summarized report with top IPs, usernames, and timestamps
+Optional: Block IPs using iptables or fail2ban
+
+
+Task 8. 
+Build a Local Package Installer Tool 
+Create a bash script:
+Reads a list of packages from packages.txt
+Checks if each is installed
+Installs missing packages
+Logs the status (success/failure) of each
+
+
+Task 9. 
+Deploy a Custom Service with systemd 
+Write a custom bash script or Python app (e.g., a dummy logging service)
+Create a .service file under /etc/systemd/system/
+Enable, start, and monitor the service using systemctl
+Set it to restart on failure and log to journald
+
+
+Task 10. 
+Host a Static Website with Nginx + SSH Deployment 
+Install and configure Nginx to serve a static HTML site
+Use scp to deploy HTML files to the server
+Set up directory permissions
+Automate deployment via bash or Makefile
+Secure Nginx with firewall rules and fail2ban
+Sharing few additional tasks. 
+These are good to have.
+Keep an eye on them
+Also keep a track of the tasks that I'm sharing with you.
+Try brainstorming, if not google. But AI is strictly prohibited.
+
+Objective is to start thinking in the terms of Linux & understand the core concepts and NOT TO JUST COMPLETE THE TASKS
+Steps to follow to login using private keys:
+
+1. In the remote server login to user 
+2. generate keys using ssh-keygen
+3. copy public keys id_rsa.pub in authorized keys
+4. Copy public keys id_rsa inside local user
+5. ssh to remote user using -i <pvt key path> arg

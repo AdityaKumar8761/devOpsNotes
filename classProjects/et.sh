@@ -7,8 +7,9 @@ file="file.txt"
 
 if [ ! -f "$file" ]
 then
-	echo "1 $u $d" > "$file"
-	count=$((count+1))
+	 count=$((count+1))
+
+	echo "$count $u $d" > "$file"
 else
 	read count Lu Ld < "$file"
         count=$((count+1))
@@ -26,5 +27,3 @@ fi
         echo "usre: $u"
         echo "execution: $d"
         echo ""
-
-

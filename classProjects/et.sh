@@ -8,23 +8,23 @@ file="file.txt"
 if [ ! -f "$file" ]
 then
 	echo "1 $u $d" > "$file"
+	count=$((count+1))
 else
 	read count Lu Ld < "$file"
-
-	count=$((count+1))
+        count=$((count+1))
 
 	echo "$count $u  $d" > "$file"
 
 	echo "last execution"
-	echo "execution count: $((count))"
+	echo "execution count: $((count-1))"
 	echo "last usre: $Lu"
 	echo "last execution: $Ld"i
 	echo ""
 fi
-
         echo "new execution"
         echo "execution count: $((count))"
         echo "usre: $u"
         echo "execution: $d"
-	echo ""
+        echo ""
+
 
